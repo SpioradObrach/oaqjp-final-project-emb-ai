@@ -8,7 +8,7 @@ def render_index_page():
     return render_template('index.html')
 
 @app.route("/emotionDetector")
-def emotion_detector():
+def query_emotion_detector():
     text_to_analyze = request.args.get("textToAnalyze")
     output = emotion_detector(text_to_analyze)
     anger = output["anger"]
