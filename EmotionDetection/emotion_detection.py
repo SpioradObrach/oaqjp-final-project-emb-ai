@@ -17,7 +17,6 @@ def emotion_detector(text_to_analyse) -> dict:
     dominant_emotion = ""
     # loop through data
     for emotion in scores_.keys():
-        print(emotion)
         score = (
             formatted_response.get("emotionPredictions")[0].get("emotion").get(emotion)
         )
