@@ -18,6 +18,10 @@ def query_emotion_detector():
     sadness = output["sadness"]
     dominant_emotion = output["dominant_emotion"]
 
+    if dominant_emotion is None:
+        infostr = "Invalid text! Please try again!"
+        return infostr
+
     infostr = f"""For the given statement, the system response
     is 'anger': {anger}, 'disgust': {disgust}, 'fear': {fear},
     'joy': {joy} and 'sadness': {sadness}. The dominant emotion
