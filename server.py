@@ -38,7 +38,7 @@ def query_emotion_detector() -> str:
     'joy': {joy} and 'sadness': {sadness}. The dominant emotion
     is {dominant_emotion}."""
     return infostr
-    
+
 
 if __name__ == '__main__':
     app.run()
